@@ -40,10 +40,10 @@ Gem::Specification.new do |spec|
 
   # Add these to the gemspec dependencies
   spec.add_dependency "avro_turf", "~> 1.18"
-  spec.add_dependency "jwt", "~> 2.10.1"
   spec.add_dependency "bunny", "~> 2.24"
+  spec.add_dependency "jwt", "~> 2.10.1"
   spec.add_dependency "ruby-kafka", "~> 1.5"
-  spec.add_development_dependency 'rspec', '~> 3.4'
-  spec.add_development_dependency 'rubocop', '~> 1.75', '>= 1.75.1'
-spec.add_development_dependency'simplecov', '~> 0.22.0'
+  spec.add_development_dependency "rspec", "~> 3.4"
+  spec.add_development_dependency "rubocop", "~> 1.75", ">= 1.75.1"
+  spec.add_development_dependency "simplecov", "~> 0.22.0"
 end

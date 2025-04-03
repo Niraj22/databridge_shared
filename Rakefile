@@ -11,15 +11,15 @@ RuboCop::RakeTask.new
 
 namespace :coverage do
   task :report do
-    require 'simplecov'
+    require "simplecov"
     SimpleCov.start do
-      add_filter '/spec/'
-      add_filter '/vendor/'
+      add_filter "/spec/"
+      add_filter "/vendor/"
     end
     Rake::Task["spec"].execute
   end
 end
 
-task :coverage => ["coverage:report"]
+task coverage: ["coverage:report"]
 
 task default: %i[spec rubocop]
