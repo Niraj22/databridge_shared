@@ -24,6 +24,7 @@ GEM
     diff-lcs (1.6.1)
     digest-crc (0.7.0)
       rake (>= 12.0.0, < 14.0.0)
+    docile (1.4.0)
     excon (0.112.0)
     json (2.10.2)
     jwt (2.10.1)
@@ -72,6 +73,12 @@ GEM
       digest-crc
     ruby-progressbar (1.13.0)
     set (1.1.1)
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.12.3)
+    simplecov_json_formatter (0.1.4)
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
@@ -88,6 +95,7 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop (~> 1.21)
+  simplecov (~> 0.22.0)
 
 BUNDLED WITH
    2.5.5
