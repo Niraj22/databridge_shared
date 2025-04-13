@@ -1,19 +1,19 @@
-# frozen_string_literal: true
-
 # lib/databridge_shared/clients/event_publisher.rb
+require 'databridge_shared/clients/kafka/producer'
+
 module DataBridgeShared
   module Clients
-    # Handles publishing events to the message broker
-    # Provides a consistent interface for all services to publish events
     class EventPublisher
       def initialize(broker_config = {})
-        # Initialize connection to Kafka or RabbitMQ
-        @config = broker_config
+        @producer = Kafka::Producer.new(broker_config)
       end
-
-      def publish(event_name, payload, _headers = {})
-        # Publication logic would go here
-        puts "Publishing event: #{event_name} with payload: #{payload}"
+      
+      def publish(event_name, payload, headers = {})
+        @producer.publish(event_name, payload)
+      end
+      
+      def shutdown
+        @producer.shutdown
       end
     end
   end
